@@ -1,34 +1,23 @@
-{% set name = "easybuild-framework" %}
 {% set version = "3.1.0" %}
-{% set md5 = "f2d06240467f06c98fb2e9243ce5d8ef" %}
 
 package:
-  name: {{ name }} 
+  name: easybuild-framework
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/fd/dd/83d8ef6a981c9e953f523328d5fba23b1be84fb7640a2c1d8b8e66b07102/{{name}}-{{version}}.tar.gz
-  md5: f2d06240467f06c98fb2e9243ce5d8ef
+  fn: easybuild-framework-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/e/easybuild-framework/easybuild-framework-{{ version }}.tar.gz
+  sha256: 5708ad14c8f0568ebf56393a5ef580d41040d11fb5fd53636aa42d26fb8f7e59
 
 build:
   number: 0
   skip: True  # [win or py3k]
-  script: |
-     python setup.py install  \
-     --single-version-externally-managed \
-     --record=record.txt 
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools >=0.6
-    - pyyaml
-    - coloredlogs
-    - humanfriendly
-    - vsc-install >=0.9.19
-    - vsc-base >=2.5.4
-
   run:
     - python
     - setuptools >=0.6
@@ -60,11 +49,11 @@ test:
 
 about:
   home: http://hpcugent.github.com/easybuild
-  license: GPLv2
-  summary: 'The EasyBuild framework supports the creation of custom easyblocks that implement support for installing particular (groups of) software packages.'
+  license: GPL-2.0
+  summary: 'The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.'
   license_family: GPL2
 
 extra:
   recipe-maintainers:
-    - jerowe 
+    - jerowe
     - boegel
