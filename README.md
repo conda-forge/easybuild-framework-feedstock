@@ -3,11 +3,11 @@ About easybuild-framework
 
 Home: http://hpcugent.github.com/easybuild
 
-Package license: GPLv2
+Package license: GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: The EasyBuild framework supports the creation of custom easyblocks that implement support for installing particular (groups of) software packages.
+Summary: The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.
 
 
 
