@@ -1,4 +1,4 @@
-{% set version = "3.7.0" %}
+{% set version = "3.8.1" %}
 
 package:
   name: easybuild-framework
@@ -7,10 +7,10 @@ package:
 source:
   fn: easybuild-framework-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/e/easybuild-framework/easybuild-framework-{{ version }}.tar.gz
-  sha256: 8f6a0b950c96c914dd65b2ebfc37aa5f5d104b138c1dda7937c4f416cf885111
+  sha256: 32eec72c868d74b2d44df2949b6ded59853439466f7a39008d6cc80b4db705f5
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [win or py3k]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
