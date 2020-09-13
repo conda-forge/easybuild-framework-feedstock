@@ -1,4 +1,4 @@
-{% set version = "4.1.0" %}
+{% set version = "4.3.0" %}
 
 package:
   name: easybuild-framework
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/easybuild-framework/easybuild-framework-{{ version }}.tar.gz
-  sha256: 336b1adc3ea410aabf900a07f6a55dcf316dc55658afc1d665d3565040be0641
+  sha256: 97c42d8f26ebc6fc43748442a9f0bbbc5316ae38b8320f7052695d9b77e101ab
 
 build:
   number: 0
-  skip: True  # [win or py3k]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [win or py3k]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -49,7 +49,7 @@ about:
   home: http://hpcugent.github.com/easybuild
   license: GPL-2.0
   license_file: LICENSE
-  summary: 'The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.'
+  summary: The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.
   license_family: GPL2
 
 extra:
