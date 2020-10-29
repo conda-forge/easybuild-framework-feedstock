@@ -5,11 +5,9 @@ Home: http://hpcugent.github.com/easybuild
 
 Package license: GPL-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/easybuild-framework-feedstock/blob/master/LICENSE.txt)
 
 Summary: The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.
-
-
 
 Current build status
 ====================
