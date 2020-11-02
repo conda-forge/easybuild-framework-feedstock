@@ -1,21 +1,27 @@
 About easybuild-framework
 =========================
 
-Home: http://hpcugent.github.com/easybuild
+Home: https://easybuilders.github.io/easybuild
 
-Package license: GPL-2.0
+Package license: GPL-2.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/easybuild-framework-feedstock/blob/master/LICENSE.txt)
 
-Summary: The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.
+Summary: The EasyBuild framework supports the creation of custom easyblocks that implement support for installing particular (groups of) software packages.
 
-
+Development: https://github.com/easybuilders/easybuild-framework
 
 Current build status
 ====================
 
 
-<table>
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4779&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/easybuild-framework-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -110,6 +116,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@anthchirp](https://github.com/anthchirp/)
 * [@boegel](https://github.com/boegel/)
 * [@jerowe](https://github.com/jerowe/)
 
