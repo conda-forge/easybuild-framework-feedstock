@@ -11,6 +11,8 @@ Summary: The EasyBuild framework supports the creation of custom easyblocks that
 
 Development: https://github.com/easybuilders/easybuild-framework
 
+Documentation: https://easybuild.readthedocs.io/en/latest/
+
 Current build status
 ====================
 
