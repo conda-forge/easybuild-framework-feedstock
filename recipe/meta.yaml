@@ -19,6 +19,9 @@ requirements:
     - pip
     - python >=3.5
   run:
+    - archspec
+    - gitpython
+    - keyring
     - python >=3.5
     - pyyaml
 
