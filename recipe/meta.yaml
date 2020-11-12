@@ -1,33 +1,34 @@
-{% set version = "4.3.0" %}
+{% set name = "easybuild-framework" %}
+{% set version = "4.3.1" %}
 
 package:
-  name: easybuild-framework
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/e/easybuild-framework/easybuild-framework-{{ version }}.tar.gz
-  sha256: 97c42d8f26ebc6fc43748442a9f0bbbc5316ae38b8320f7052695d9b77e101ab
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/easybuild-framework-{{ version }}.tar.gz
+  sha256: 6f3b82c4fc1fa4a7273e4ffb4766393064bec564051151d21ba96ea17611508a
 
 build:
   number: 0
-  skip: true  # [win or py3k]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
+  host:
     - pip
+    - python >=3.5
   run:
-    - python
+    - archspec
+    - gitpython
+    - keyring
+    - python >=3.5
     - pyyaml
-    - coloredlogs
-    - humanfriendly
-    - vsc-install >=0.9.19
-    - vsc-base >=2.5.4
 
 test:
   imports:
     - easybuild
+    - easybuild.base
     - easybuild.framework
     - easybuild.framework.easyconfig
     - easybuild.framework.easyconfig.format
@@ -44,15 +45,22 @@ test:
     - easybuild.tools.package.package_naming_scheme
     - easybuild.tools.repository
     - easybuild.tools.toolchain
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: http://hpcugent.github.com/easybuild
-  license: GPL-2.0
-  license_file: LICENSE
-  summary: The EasyBuild framework supports the creation of custom framework that implement support for installing particular (groups of) software packages.
+  home: https://easybuilders.github.io/easybuild
+  summary: The EasyBuild framework supports the creation of custom easyblocks that implement support for installing particular (groups of) software packages.
+  license: GPL-2.0-only
   license_family: GPL2
+  license_file: LICENSE
+  dev_url: https://github.com/easybuilders/easybuild-framework
+  doc_url: https://easybuild.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
     - jerowe
     - boegel
+    - anthchirp
