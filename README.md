@@ -1,11 +1,11 @@
-About easybuild-framework
-=========================
+About easybuild-framework-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/easybuild-framework-feedstock/blob/main/LICENSE.txt)
 
 Home: https://easybuilders.github.io/easybuild
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/easybuild-framework-feedstock/blob/main/LICENSE.txt)
 
 Summary: The EasyBuild framework supports the creation of custom easyblocks that implement support for installing particular (groups of) software packages.
 
