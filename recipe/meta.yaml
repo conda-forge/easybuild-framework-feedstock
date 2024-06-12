@@ -1,13 +1,13 @@
 {% set name = "easybuild-framework" %}
-{% set version = "4.9.1" %}
+{% set version = "4.9.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/easybuild-framework-{{ version }}.tar.gz
-  sha256: 8f0448d32fab13019e06dba80fa3e13681574df302452184e5f8543c13ff2123
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: cc6e0fe7bab2a96d424656ed70bf33e3b083eef5ceaa5d5fed88aa7b91dd3d63
 
 build:
   number: 0
