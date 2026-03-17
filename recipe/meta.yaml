@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 5b380a2e3a359f64f06789c390200b922a840f6b10b441e5163696a34bd9bc27
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - archspec
     - gitpython
     - keyring
-    - python >=3.5
+    - python >={{ python_min }}
     - pyyaml
 
 test:
@@ -49,6 +49,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://easybuilders.github.io/easybuild
